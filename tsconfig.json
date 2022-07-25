@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "target": "es5",
+        "noEmit": true,
+        "allowSyntheticDefaultImports": true,
+        "allowJs": true
+    },
+
+    "exclude": [
+        "node_modules",
+    ],
+}
