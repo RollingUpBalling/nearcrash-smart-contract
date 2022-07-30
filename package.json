@@ -7,7 +7,7 @@
   "scripts": {
     "build": "yarn build:clean-state && yarn build:counter && yarn build:counter-lowlevel && yarn build:counter-ts && yarn build:cross-contract-call && yarn build:fungible-token-lockable && yarn build:fungible-token && yarn build:non-fungible-token && yarn build:status-message-collections && yarn build:status-message",
     "rebuild": "cd .. && yarn build && cd examples && rm -rf node_modules && rm -rf build && yarn && yarn build",
-    "build:contract": "near-sdk --experimental-specifier-resolution=node build src/non-fungible-token.js build/non-fungible-token.wasm",
+    "build:contract": "near-sdk-js build src/non-fungible-token.ts build/non-fungible-token.wasm",
     "test": "ava && yarn test:counter-lowlevel && yarn test:counter-ts && yarn test:check-ts-build",
     "test:check-ts-build": "yarn run tsc",
     "test:non-fungible-token": "ava __tests__/test-non-fungible-token.ava.js"
@@ -23,6 +23,7 @@
   "devDependencies": {
     "ava": "^4.2.0",
     "near-workspaces": "2.0.0",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "uuid": "^8.3.2"
   }
 }
